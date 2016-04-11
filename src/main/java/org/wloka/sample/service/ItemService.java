@@ -8,13 +8,11 @@ public class ItemService {
 
     private DB storage;
 
+    /**
+     * Hint: Don't initialize DB in a ctor. Ever.
+     */
     public ItemService() {
-        // FIXME: Remove DB initialization from ctor
-        this(DB.init());
-    }
-
-    public ItemService(DB database) {
-        this.storage = database;
+        this.storage = DB.init();
     }
 
     public Item createItem(Item item) throws ItemResolverException {
@@ -37,5 +35,4 @@ public class ItemService {
         storage.store(item);
         return item;
     }
-
 }

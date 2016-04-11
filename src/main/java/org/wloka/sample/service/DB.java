@@ -20,12 +20,11 @@ public class DB {
 
     private IPropertiesStore data;
 
+    /**
+     * Hint: We don't like the implicit dependency to store object
+     */
     protected DB() {
-        this(new InMemoryPropertiesStore());
-    }
-
-    protected DB(IPropertiesStore store) {
-        this.data = store;
+        this.data = new InMemoryPropertiesStore();
     }
 
     public Item get(String path) {
