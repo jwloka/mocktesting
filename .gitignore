@@ -1,15 +1,10 @@
 build/
 .gradle/
 
+*.iml
 *.iws
 .DS_Store
-.idea/atlassian-ide-plugin.xml
-.idea/dictionaries
-.idea/tasks.xml
-.idea/uiDesigner.xml
-.idea/workspace.xml
-.idea/checkstyle-idea.xml
-.idea/shelf/
+.idea
 .sonar
 overlays
 target
